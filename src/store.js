@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     id: -1,
     username: '',
-    avatarUrl: 'http://localhost:9001/img/Photo-2020-11-01-15-22-45.jpg',
+    avatarUrl: 'http://1.15.90.245/img/Photo-2020-11-01-15-22-45.jpg',
     email: '',
     birthday: '',
     private: '',
@@ -32,7 +32,7 @@ export default new Vuex.Store({
   actions: {
     getUser(context, payload) {
       return new Promise((resolve, reject) => {
-        axios_get('http://localhost:9001/getuser/' + payload)
+        axios_get('http://1.15.90.245:9001/getuser/' + payload)
         .then(res => {
           context.commit("login", res)
         })
