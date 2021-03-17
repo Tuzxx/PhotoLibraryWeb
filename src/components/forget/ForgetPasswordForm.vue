@@ -137,10 +137,10 @@ export default {
     },
     checkUsername(rule, value, callback) {
       const form = this.form
-      axios_get('http://localhost:9001/getusername/'  + value)
+      axios_get('http://1.15.90.245:9001/getusername/'  + value)
       .then(res => {
         if(res == false) {
-          axios_get("http://localhost:9001/getuseremail/" + value).then(res => {
+          axios_get("http://1.15.90.245:9001/getuseremail/" + value).then(res => {
             this.email = res
           }).catch(err => {
             console.log(err)
@@ -158,7 +158,7 @@ export default {
       const form = this.form
       this.getCodeButtonAble = false
       if(this.email != "error"){
-        axios_get('http://localhost:9001/sendEmailCode/' + this.email)
+        axios_get('http://1.15.90.245:9001/sendEmailCode/' + this.email)
         .then(res => {
           this.code = res;
         })
@@ -183,7 +183,7 @@ export default {
       const form = this.form
       form.validateFields(err => {
         if (!err && form.getFieldValue('captcha') == this.code) {
-          axios_post('http://localhost:9001/updatePassword', {
+          axios_post('http://1.15.90.245:9001/updatePassword', {
             username: form.getFieldValue('username'),
             password: form.getFieldValue('password'),
           }).then(res => {

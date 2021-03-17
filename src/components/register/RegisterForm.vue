@@ -204,7 +204,7 @@ export default {
     },
     checkUsername(rule, value, callback) {
       const form = this.form
-      axios_get('http://localhost:9001/getusername/'  + value)
+      axios_get('http://1.15.90.245:9001/getusername/'  + value)
       .then(res => {
         if(res == false) {
           callback("Username already exists")
@@ -220,7 +220,7 @@ export default {
       const form = this.form
       this.getCodeButtonAble = false
       if(form.getFieldValue('email')){
-        axios_get('http://localhost:9001/sendEmailCode/' + form.getFieldValue('email')+".com")
+        axios_get('http://1.15.90.245:9001/sendEmailCode/' + form.getFieldValue('email')+".com")
         .then(res => {
           this.code = res;
         })
@@ -245,7 +245,7 @@ export default {
       const form = this.form
       form.validateFields(err => {
         if (!err && form.getFieldValue('captcha') == this.code) {
-          axios_post('http://localhost:9001/register', {
+          axios_post('http://1.15.90.245:9001/register', {
             username: form.getFieldValue('username'),
             password: form.getFieldValue('password'),
             email: form.getFieldValue('email')

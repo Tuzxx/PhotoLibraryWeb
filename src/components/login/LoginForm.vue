@@ -97,7 +97,7 @@
         this.form.validateFields((err, values) => {
           if (!err) {
             axios_post(
-              'http://localhost:9001/login',
+              'http://1.15.90.245/:9001/login',
               {
                 username: values.username,
                 password: values.password

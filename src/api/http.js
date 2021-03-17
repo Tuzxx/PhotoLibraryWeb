@@ -24,7 +24,7 @@ axios.interceptors.response.use(
       if (error.response.status === 401) {
         // 跳转不可以使用this.$router.push方法、
         // this.$router.push({path:'/login'})
-        window.location.href = "http://localhost:8080/login"
+        window.location.href = "http://1.15.90.245/:8080/login"
       } else {
         // errorHandle(response.status, response.data.message);
         return Promise.reject(error.response);

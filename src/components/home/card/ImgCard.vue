@@ -36,7 +36,7 @@
     ],
     methods: {
       deleteCard() {
-        axios.delete("http://localhost:9001/deletecard/" + this.c_Data.pid)
+        axios.delete("http://1.15.90.245:9001/deletecard/" + this.c_Data.pid)
         .then(res => {
           console.log(res);
           location.reload()

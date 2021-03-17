@@ -62,13 +62,13 @@ export default {
       if (this.$refs.upAva.avatarFile != '') {
         var image = new FormData()
         image.append('image_data', this.$refs.upAva.avatarFile)
-        this.$ajax.post('http://localhost:9001/addphoto', image, {
+        this.$ajax.post('http://1.15.90.245:9001/addphoto', image, {
           headers: {
             "Content-Type": "multipart/form-data"
           }
         }).then(res => {
           this.form.avatarUrl = res.data
-          axios_post('http://localhost:9001/updateuserprofile', this.form)
+          axios_post('http://1.15.90.245:9001/updateuserprofile', this.form)
           .then(res => {
             if(res == "success") {
               alert("添加成功")

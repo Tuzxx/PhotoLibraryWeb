@@ -46,7 +46,7 @@
 
         var image = new FormData()
         image.append('image_data', this.$refs.postForm.$refs.postFormImg.imgFile)
-        this.$ajax.post('http://localhost:9001/addphoto', image, {
+        this.$ajax.post('http://1.15.90.245:9001/addphoto', image, {
           headers: {
             "Content-Type": "multipart/form-data"
           }
@@ -58,7 +58,7 @@
           postForm.avatarUrl = that.$store.state.avatarUrl
           postForm.imgUrl = res.data
           
-          axios_post("http://localhost:9001/postcard", postForm).then(res => {
+          axios_post("http://1.15.90.245:9001/postcard", postForm).then(res => {
             alert("Post successfully")
             that.loading = false
             that.visible = false
