@@ -40,7 +40,7 @@
     },
     created() {
       axios_get(
-        'http://localhost:9001/showoneall/' + this.$store.state.id
+        'http://1.15.90.245:9001/showoneall/' + this.$store.state.id
       ).then(res => {
         this.c_Data = res
       }).catch(err => {

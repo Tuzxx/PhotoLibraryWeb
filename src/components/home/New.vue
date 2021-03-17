@@ -36,7 +36,7 @@
     },
     created() {
       axios_get(
-        'http://localhost:9001/showall'
+        'http://1.15.90.245:9001/showall'
       ).then(res => {
         this.c_Data = res
       }).catch(err => {

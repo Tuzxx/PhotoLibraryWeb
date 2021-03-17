@@ -49,7 +49,7 @@ export function axios_get(url, params) {
           console.log("封装信息的的res", res)
           resolve(res.data)
         }).catch(err => {
-          reject(err.data)
+          reject(err)
         })
     }
   )
