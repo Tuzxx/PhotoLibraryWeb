@@ -64,7 +64,7 @@ export function axios_post(url, data) {
           console.log("封装信息的的res", res)
           resolve(res.data)
         }).catch(err => {
-          reject(err.data)
+          reject(err)
         })
     }
   )
@@ -79,7 +79,7 @@ export function axios_put(url, data) {
           console.log("封装信息的的res", res)
           resolve(res.data)
         }).catch(err => {
-          reject(err.data)
+          reject(err)
         })
     }
   )
@@ -94,7 +94,7 @@ export function axios_delete(url, data) {
           console.log("封装信息的的res", res)
           resolve(res.data)
         }).catch(err => {
-          reject(err.data)
+          reject(err)
         })
     }
   )
