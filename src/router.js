@@ -17,7 +17,7 @@ import RegisterSuccess from './components/register/RegisterSuccess'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {
