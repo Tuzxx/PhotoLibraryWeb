@@ -16,7 +16,7 @@
               'username',
               { rules: [{ required: true, message: 'Please input your username!' }] },
             ]"
-            placeholder="Username"
+            placeholder="Username Tuzxxx"
             autocomplete="on"
           >
             <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
@@ -29,7 +29,7 @@
               { rules: [{ required: true, message: 'Please input your Password!' }] },
             ]"
             type="password"
-            placeholder="Password"
+            placeholder="Password 123456"
             autocomplete="off"
           >
             <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
