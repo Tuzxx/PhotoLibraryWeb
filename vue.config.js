@@ -9,8 +9,4 @@ module.exports = {
       }
     }
   },
-
-  build: {
-    assetsPublicPath: '/photo-library',
-  }
 }
