@@ -8,5 +8,9 @@ module.exports = {
         'api': '@/api'
       }
     }
+  },
+
+  build: {
+    assetsPublicPath: '/photo-library',
   }
 }
